@@ -39,9 +39,14 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # Use Font Awesome to make pretty icons
 gem 'font-awesome-rails'
 
+# add devise for login
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'figaro'
+
 end
 
 group :development do
@@ -54,7 +59,7 @@ group :development do
   gem 'sqlite3'
 end
 
-group :production do 
+group :production do
   gem 'pg', '~> 0.18.4'
 end
 
