@@ -18,10 +18,15 @@
             <form action="/payments" method="post" id="payment-form">
               <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
               <div class="form-group text-left">
+                <label>Loan #</label>
+                <div class="input-group">
+                  <span class="input-group-addon">#</span>
+                  <input class="form-control input-lg" type="text" placeholder="12345" name="loan_number">
+                </div>
                 <label>Payment amount</label>
                 <div class="input-group">
                   <span class="input-group-addon">$</span>
-                  <input class="form-control input-lg" type="text" placeholder="20.00" name="amount">
+                  <input class="form-control input-lg" type="text" placeholder="1000.00" name="amount">
                 </div>
               </div>
               <div class="topspace-md text-muted text-left">
