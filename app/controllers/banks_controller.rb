@@ -14,8 +14,9 @@ class BanksController < ApplicationController
         # In a production application, you'll want to store the customer in your database
         if session[:customer].nil?
           customer = Stripe::Customer.create(
+            name: current_user.name,
+            email: current_user.email,
             source: token,
-            description: 'Bank account form example customer'
           )
 
         # Replace the existing bank account for the existing customer

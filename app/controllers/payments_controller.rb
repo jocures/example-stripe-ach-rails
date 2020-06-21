@@ -30,7 +30,7 @@ class PaymentsController < ApplicationController
           source: params[:bank_account],
           amount: amount,
           currency: 'usd',
-          description: 'Payment from ACH example app'
+          description: params[:loan_number]
         )
 
         # Let the customer know the payment was successful
